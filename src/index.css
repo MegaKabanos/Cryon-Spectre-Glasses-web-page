@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --main-font: "Bebas Neue", sans-serif;
+  --sub-font: "Montserrat", sans-serif;
+
+  --accent: hsl(256, 81%, 53%);
+  --bg-dark: hsl(0, 0%, 0%);
+  --bg: hsl(0, 0%, 5%);
+  --bg-light: hsl(0, 0%, 10%);
+  --text: hsl(0, 0%, 95%);
+  --text-muted: hsl(0, 0%, 70%);
+  --border: hsl(0, 0%, 15%);
+  --highlight: hsl(0, 0%, 60%);
+
+  --w-bg-dark: hsl(0, 0%, 85%);
+  --w-bg: hsl(0, 0%, 90%);
+  --w-bg-light: hsl(0, 0%, 100%);
+  --w-text: hsl(0, 0%, 5%);
+  --w-text-muted: hsl(0, 0%, 20%);
+  --w-border: hsl(0, 0%, 30%);
+  --w-highlight: hsl(0, 0%, 100%);
+}
+
+.font-bebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
