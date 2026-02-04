@@ -43,7 +43,7 @@ const Hero = () => {
         className="flex items-center justify-center border border-(--border)/20 bg-white/10 w-full backdrop-blur-2xl mb-16 shadow-[0_0_50px_1px_rgba(0,0,0,0.3)]"
       >
         <div className="flex w-screen max-w-6xl flex-col items-center justify-between py-5 gap-3 sm:px-7 sm:py-9 text-center sm:flex-row sm:gap-20">
-          <p className="font-montserrat bg-linear-to-t from-white to-gray-300 bg-clip-text text-sm font-semibold tracking-tighter text-transparent uppercase drop-shadow-2xl sm:mb-auto sm:text-4xl md:max-w-5xl">
+          <p className="font-montserrat bg-linear-to-t from-white to-gray-300 bg-clip-text text-sm font-semibold tracking-tighter text-transparent uppercase drop-shadow-2xl sm:text-4xl md:max-w-5xl">
             experience the future of smart eyewear
           </p>
           {/* Buy Now Button */}
