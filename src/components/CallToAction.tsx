@@ -18,13 +18,16 @@ const CallToAction2 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="font-inter mb-6 text-3xl font-semibold tracking-wide text-(--text) sm:text-4xl md:text-6xl"
+            className="font-inter mb-6 text-[1.7rem] font-bold tracking-wide text-(--text) sm:text-4xl md:text-6xl"
           >
-            Ready to integrate{" "}
-            <span className="bg-linear-to-r from-(--accent) to-purple-600 bg-clip-text whitespace-nowrap text-transparent">
-              OAK 4 D
-            </span>{" "}
-            into your platform?
+            Ready to see the world differently with{" "}
+            <span className="whitespace-nowrap" >
+              <span className="text-(--accent)">
+                Spectre
+              </span>{" "}
+              ?
+            </span>
+
           </motion.h2>
 
           {/* Description */}
@@ -35,9 +38,9 @@ const CallToAction2 = () => {
             viewport={{ once: true }}
             className="font-montserrat mx-auto mb-12 max-w-2xl text-lg text-(--text-muted)"
           >
-            Experience advanced robotic vision with 52 TOPS AI performance,
-            stereo depth sensing, and industrial-grade reliability. Get started
-            today.
+            Experience the future of augmented reality with 52 TOPS AI
+            performance, immersive stereo depth sensing, and all-day wearable
+            comfort. Step into a new reality today.
           </motion.p>
 
           {/* Buttons */}
@@ -52,7 +55,7 @@ const CallToAction2 = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="font-inter group flex min-w-50 items-center justify-center gap-2 rounded-full border-2 border-(--accent) bg-transparent px-8 py-4 text-lg font-light text-(--accent) transition-all duration-200 hover:bg-(--accent)/10"
+              className="font-inter group flex min-w-50 cursor-pointer items-center justify-center gap-2 rounded-full border-2 border-(--accent) bg-transparent px-8 py-4 text-lg font-light text-(--accent) transition-all duration-200 hover:bg-(--accent)/10"
             >
               Contact Sales
               <ChevronRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -62,7 +65,7 @@ const CallToAction2 = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="font-inter group flex min-w-50 items-center justify-center gap-2 rounded-full bg-(--accent) px-8 py-4 text-lg font-semibold text-white shadow-(--accent)/30 shadow-lg transition-opacity duration-200 hover:opacity-90"
+              className="font-inter group flex min-w-50 cursor-pointer items-center justify-center gap-2 rounded-full bg-(--accent) px-8 py-4 text-lg font-semibold text-white shadow-(--accent)/30 shadow-lg transition-opacity duration-200 hover:opacity-90"
             >
               Buy Now
               <ChevronRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />

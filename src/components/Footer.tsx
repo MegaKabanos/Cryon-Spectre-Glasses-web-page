@@ -1,30 +1,29 @@
 import { motion } from "framer-motion";
 import { Twitter, Youtube, Linkedin, Github } from "lucide-react";
-import logoWhite from "../assets/logo-white.svg";
+import logoWhite from "../assets/logo.svg";
 
 const Footer = () => {
   const footerLinks = {
     company: [
-      { label: "Home", href: "#" },
-      { label: "Hub", href: "#" },
-      { label: "Services", href: "#" },
-      { label: "Industry Solutions", href: "#" },
-      { label: "About Us", href: "#" },
-      { label: "Careers", href: "#" },
+      { label: "Home" },
+      { label: "Services" },
+      { label: "Industry Solutions" },
+      { label: "About Us" },
+      { label: "Careers" },
     ],
     resources: [
-      { label: "Distributors", href: "#" },
-      { label: "Support", href: "#" },
-      { label: "Forum", href: "#" },
-      { label: "Docs", href: "#" },
-      { label: "Blog", href: "#" },
+      { label: "Distributors" },
+      { label: "Support" },
+      { label: "Forum" },
+      { label: "Docs" },
+      { label: "Blog" },
     ],
     products: [
-      { label: "Store", href: "#" },
-      { label: "OAK Cameras", href: "#" },
-      { label: "OAK Modules", href: "#" },
-      { label: "Guide", href: "#" },
-      { label: "Warranty & Refund Policy", href: "#" },
+      { label: "Store" },
+      { label: "Cryon Spectre" },
+      { label: "Accessories" },
+      { label: "Guide" },
+      { label: "Warranty & Refund Policy" },
     ],
   };
 
@@ -35,7 +34,7 @@ const Footer = () => {
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand and Socials */}
           <div className="space-y-8">
-            <img src={logoWhite} alt="Luxonis" className="h-10" />
+            <img src={logoWhite} alt="Cryon" className="h-10" />
             <div className="flex gap-5 text-(--text-muted)">
               <Twitter
                 className="cursor-pointer transition-colors hover:text-(--accent)"
@@ -62,8 +61,7 @@ const Footer = () => {
               {links.map((link) => (
                 <a
                   key={link.label}
-                  href={link.href}
-                  className="text-sm text-(--text) transition-colors hover:text-(--accent)"
+                  className="cursor-pointer text-sm text-(--text) transition-colors hover:text-(--accent)"
                 >
                   {link.label}
                 </a>
@@ -82,11 +80,11 @@ const Footer = () => {
           <h3 className="font-bebas text-2xl tracking-wide md:text-3xl">
             Newsletter Sign Up
           </h3>
-          <div className="relative flex w-full min-w-75 items-center overflow-hidden rounded-full bg-(--w-bg-light) p-1 md:w-auto lg:min-w-md">
+          <div className="relative flex w-full min-w-75 items-center overflow-hidden rounded-full bg-(--bg) p-1 md:w-auto lg:min-w-md">
             <input
               type="email"
               placeholder="Enter your email here..."
-              className="flex-1 px-6 py-2 text-[0.8rem] text-black outline-none placeholder:text-(--w-text)/40"
+              className="flex-1 px-6 py-2 text-[0.8rem] text-(--text) outline-none placeholder:text-(--text-muted)"
             />
             <button className="cursor-pointer rounded-full bg-(--accent) px-2 py-2 text-xs font-bold text-(--text) transition-all">
               Subscribe
@@ -96,9 +94,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col items-center gap-4 border-t border-(--border) pt-8 text-[12px] text-(--text-muted) md:grid md:grid-cols-3">
-          <p className="justify-self-start">
-            All Rights Reserved © 2026 Luxonis
-          </p>
+          <p className="justify-self-start">All Rights Reserved © 2026 Cryon</p>
           <div className="flex gap-8 justify-self-end md:col-span-2">
             <a href="#" className="transition-colors hover:text-(--text)">
               Privacy Policy

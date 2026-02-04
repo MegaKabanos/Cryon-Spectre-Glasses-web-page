@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import oakD4 from "../assets/OAK_D_4.png";
-
+import imgPlaceholder from "../assets/placeholder.jpg";
 const TechSpecsSheet = () => {
   {
     /* Specification Data */
@@ -16,6 +15,7 @@ const TechSpecsSheet = () => {
         { label: "RAM", value: "8GB LPDDR5" },
         { label: "Storage", value: "128GB eMMC" },
         { label: "Total AI Performance", value: "52 TOPS" },
+        { label: "DSP (INT8)", value: "48 TOPS" },
         { label: "DSP (INT8)", value: "48 TOPS" },
         { label: "GPU (FP16)", value: "4 TOPS" },
       ],
@@ -34,12 +34,12 @@ const TechSpecsSheet = () => {
     {
       section: "PHYSICAL SPECIFICATIONS",
       specs: [
-        { label: "Dimensions", value: "143.78 x 42.5 x 67.34 mm" },
-        { label: "Weight", value: "674g" },
-        { label: "IP Rating", value: "IP67 (Waterproof & Dustproof)" },
-        { label: "Operating Temp", value: "-20°C to +60°C" },
-        { label: "Storage Temp", value: "-40°C to +70°C" },
-        { label: "Material", value: "Aluminum & Industrial Grade Polymer" },
+        { label: "Dimensions", value: "158 x 162 x 48 mm (Unfolded)" },
+        { label: "Weight", value: "76g" },
+        { label: "IP Rating", value: "IP54 (Splash & Dust Resistant)" },
+        { label: "Operating Temp", value: "-20°C to +50°C" },
+        { label: "Storage Temp", value: "-30°C to +70°C" },
+        { label: "Material", value: "Aerospace Titanium & TR90" },
       ],
     },
     {
@@ -56,10 +56,10 @@ const TechSpecsSheet = () => {
     {
       section: "SOFTWARE & OS",
       specs: [
-        { label: "Operating System", value: "Luxonis OS" },
+        { label: "Operating System", value: "Cryon OS" },
         { label: "Linux Kernel", value: "Linux 5.15+" },
         { label: "Architecture", value: "ARM-based" },
-        { label: "SDK Support", value: "OAK SDK, DepthAI, Python, C++" },
+        { label: "SDK Support", value: "Spectre SDK, DepthAI, Python, C++" },
         { label: "AI Frameworks", value: "TensorFlow, ONNX, PyTorch" },
         { label: "Development", value: "Open-source libraries & tools" },
       ],
@@ -68,7 +68,7 @@ const TechSpecsSheet = () => {
 
   return (
     <div className="bg-(--bg-dark) shadow-2xl md:px-5 md:py-10">
-      <section className="relative w-full rounded-2xl bg-(--w-bg-light) px-4 py-20">
+      <section className="relative w-full rounded-2xl bg-(--bg-light) px-4 py-20">
         <div className="mx-auto max-w-7xl">
           {/* Header */}
           <motion.div
@@ -78,9 +78,9 @@ const TechSpecsSheet = () => {
             viewport={{ once: true }}
             className="mb-20"
           >
-            <h2 className="font-bebas mb-4 text-5xl tracking-wider text-(--w-text) md:text-7xl">
+            <h2 className="font-bebas mb-4 text-5xl tracking-wider text-(--text) md:text-7xl">
               DETAILED HARDWARE
-              <span className="mt-2 block bg-linear-to-r from-(--accent) to-purple-600 bg-clip-text text-transparent">
+              <span className="mt-2 block bg-linear-to-r from-(--accent) to-blue-600 bg-clip-text text-transparent">
                 & SOFTWARE SPECIFICATIONS
               </span>
             </h2>
@@ -91,11 +91,11 @@ const TechSpecsSheet = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="mb-4 flex items-center justify-center overflow-hidden rounded-2xl border border-(--w-border) bg-linear-to-br from-(--w-bg-light) to-(--w-bg-light) sm:hidden"
+            className="mb-4 flex items-center justify-center overflow-hidden rounded-2xl border border-(--border) bg-linear-to-br from-(--bg-light) to-(--bg-light) sm:hidden"
           >
             <img
-              src={oakD4}
-              alt="OAK 4 D Component"
+              src={imgPlaceholder}
+              alt="Cryon Spectre Component"
               className="h-full w-full object-contain"
             />
           </motion.div>
@@ -105,7 +105,7 @@ const TechSpecsSheet = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, staggerChildren: 0.1 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 gap-15 rounded-2xl border border-(--w-border) bg-(--w-bg)/20 p-8 shadow-2xl sm:p-14 md:grid-cols-2"
+            className="grid grid-cols-1 gap-15 rounded-2xl border border-(--border) bg-(--bg)/20 p-8 shadow-2xl sm:p-14 md:grid-cols-2"
           >
             {specifications.map((category, index) => (
               <React.Fragment key={index}>
@@ -116,11 +116,11 @@ const TechSpecsSheet = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="hidden min-h-96 items-center justify-center overflow-hidden rounded-2xl border border-(--w-border) bg-linear-to-br from-(--w-bg-light) to-(--w-bg-light) sm:flex"
+                    className="hidden min-h-96 items-center justify-center overflow-hidden rounded-2xl border border-(--border) bg-linear-to-br from-(--bg-light) to-(--bg-light) sm:flex"
                   >
                     <img
-                      src={oakD4}
-                      alt="OAK 4 D Component"
+                      src={imgPlaceholder}
+                      alt="Cryon Spectre Component"
                       className="h-full w-full object-contain"
                     />
                   </motion.div>
@@ -132,8 +132,11 @@ const TechSpecsSheet = () => {
                   viewport={{ once: true }}
                   className="group"
                 >
-                  <div className="mb-6 border-b border-(--w-border) pb-4">
-                    <h3 className="font-bebas text-xl tracking-widest text-(--accent) uppercase">
+                  <div className="mb-6 border-b border-(--border) pb-4">
+                    <h3
+                      className="font-bebas text-xl tracking-widest text-(--accent) uppercase"
+                      style={{ textShadow: "2px 2px 2px rgba(0, 0, 0, 0.2)" }}
+                    >
                       {category.section}
                     </h3>
                   </div>
@@ -145,12 +148,12 @@ const TechSpecsSheet = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.4, delay: specIndex * 0.05 }}
                         viewport={{ once: true }}
-                        className="flex flex-col gap-2 border-b border-(--w-border)/50 pb-4 sm:flex-row sm:items-start sm:justify-between"
+                        className="flex flex-col gap-2 border-b border-(--border)/50 pb-4 sm:flex-row sm:items-start sm:justify-between"
                       >
-                        <span className="font-montserrat shrink-0 text-sm tracking-wide text-(--w-text-muted) uppercase">
+                        <span className="font-montserrat shrink-0 text-sm tracking-wide text-(--text-muted) uppercase">
                           {spec.label}
                         </span>
-                        <span className="font-bebas text-right text-sm tracking-wide text-(--w-text) sm:text-left">
+                        <span className="font-bebas text-right text-sm tracking-wide text-(--text) sm:text-left">
                           {spec.value}
                         </span>
                       </motion.div>
@@ -163,14 +166,14 @@ const TechSpecsSheet = () => {
         </div>
         {/* Call to Action */}
         <div className="mx-auto mt-1 flex max-w-7xl flex-col items-center justify-center gap-5 rounded-3xl p-5 text-center whitespace-nowrap sm:p-10 lg:flex-row xl:gap-6">
-          <p className="font-semnibold text-4xl text-(--w-text) sm:mr-12">
-            Learn more <br className="sm:hidden" /> about OAK 4 D
+          <p className="font-semnibold text-4xl text-(--text) sm:mr-12">
+            Learn more <br className="sm:hidden" /> about Spectre
           </p>
-          <button className="font-inter text-md z-10 w-70 rounded-full border border-(--w-bg) bg-(--w-bg) px-4 py-2 font-medium text-(--w-text) transition-colors duration-200 hover:border-(--accent) hover:bg-(--w-bg-light) hover:text-(--accent) lg:px-8 lg:py-4 xl:text-xl">
+          <button className="font-inter text-md z-10 w-70 rounded-full border border-(--bg) bg-(--bg) px-4 py-2 font-medium text-(--text) transition-colors duration-200 hover:border-(--accent) hover:bg-(--bg-light) hover:text-(--accent) lg:px-8 lg:py-4 xl:text-xl">
             Full documentation{" "}
             <ChevronRight className="inline-block h-auto w-5" />
           </button>
-          <button className="font-inter text-md z-10 w-70 rounded-full border border-(--w-bg) bg-(--w-bg) px-4 py-2 font-medium text-(--w-text) transition-colors duration-200 hover:border-(--accent) hover:bg-(--w-bg-light) hover:text-(--accent) lg:px-8 lg:py-4 xl:text-xl">
+          <button className="font-inter text-md z-10 w-70 rounded-full border border-(--bg) bg-(--bg) px-4 py-2 font-medium text-(--text) transition-colors duration-200 hover:border-(--accent) hover:bg-(--bg-light) hover:text-(--accent) lg:px-8 lg:py-4 xl:text-xl">
             Get Started guide{" "}
             <ChevronRight className="inline-block h-auto w-5" />
           </button>

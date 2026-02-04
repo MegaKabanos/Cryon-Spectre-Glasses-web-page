@@ -5,8 +5,17 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import TechSpecsSheet from "./components/TechSpecsSheet";
 import CallToAction from "./components/CallToAction";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
+    return () => lenis.destroy();
+  }, []);
+
   return (
     <div>
       <Header />
@@ -14,7 +23,7 @@ function App() {
       <ImageSlider />
       <UseCases />
       <TechSpecsSheet />
-      <CallToAction /> 
+      <CallToAction />
       <Footer />
     </div>
   );

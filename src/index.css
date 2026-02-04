@@ -6,12 +6,13 @@
   --main-font: "Bebas Neue", sans-serif;
   --sub-font: "Montserrat", sans-serif;
 
-  --accent: hsl(256, 81%, 53%);
+  --accent: hsl(207, 100%, 41%);
   --bg-dark: hsl(0, 0%, 0%);
   --bg: hsl(0, 0%, 5%);
   --bg-light: hsl(0, 0%, 10%);
   --text: hsl(0, 0%, 95%);
   --text-muted: hsl(0, 0%, 70%);
+  
   --border: hsl(0, 0%, 15%);
   --highlight: hsl(0, 0%, 60%);
 
@@ -36,6 +37,14 @@
 
 body,
 html {
+  margin: 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
   margin: 0;
   width: 100%;
   font-family: "Montserrat", sans-serif;

@@ -12,58 +12,58 @@ const UseCases = () => {
   const useCases = [
     {
       id: 1,
-      icon: Package,
-      title: "Robotic Manipulation",
+      icon: Eye,
+      title: "Professional Navigation",
       description:
-        "Enables precise object detection and grasping with real-time depth perception for pick-and-place operations.",
-      applications: ["Bin picking", "Palletizing", "Parts assembly"],
+        "Get real-time directions and spatial awareness overlaid on your vision for hands-free navigation in complex environments.",
+      applications: ["Field work", "Urban navigation", "Wayfinding"],
     },
     {
       id: 2,
-      icon: Navigation,
-      title: "Autonomous Navigation",
+      icon: Shield,
+      title: "Industrial Maintenance",
       description:
-        "Power self-driving robots with advanced obstacle detection and spatial awareness for safe autonomous operation.",
-      applications: ["AGV systems", "Delivery robots", "Mobile manipulation"],
+        "Access technical documentation and AR overlays for machinery repair and maintenance with hands-free operation.",
+      applications: ["Equipment repair", "Troubleshooting", "Quality checks"],
     },
     {
       id: 3,
       icon: Factory,
-      title: "Quality Inspection",
+      title: "Healthcare & Surgery",
       description:
-        "Perform high-precision visual inspection and defect detection in manufacturing with AI-powered analysis.",
-      applications: ["Production lines", "Defect detection", "Product sorting"],
+        "Enhance surgical precision with augmented visuals and real-time data visualization for medical professionals.",
+      applications: [
+        "Surgical guidance",
+        "Patient data",
+        "Remote consultation",
+      ],
     },
     {
       id: 4,
-      icon: Eye,
-      title: "Gesture Recognition",
+      icon: Package,
+      title: "Warehouse & Logistics",
       description:
-        "Recognize and track human gestures and poses for intuitive human-robot interaction and control.",
-      applications: [
-        "Human-robot collaboration",
-        "Gesture control",
-        "Pose estimation",
-      ],
+        "Optimize picking and packing operations with visual task guidance and inventory management overlay.",
+      applications: ["Inventory tracking", "Pick guidance", "Barcode scanning"],
     },
     {
       id: 5,
       icon: Smartphone,
-      title: "Smart Retail",
+      title: "Remote Collaboration",
       description:
-        "Enable cashierless checkout, inventory management, and customer analytics with computer vision capabilities.",
-      applications: ["Self-checkout", "Shelf monitoring", "Traffic analysis"],
+        "Enable experts to guide field workers in real-time with shared vision and AR annotations from remote locations.",
+      applications: ["Expert guidance", "Training", "Team coordination"],
     },
     {
       id: 6,
-      icon: Shield,
-      title: "Security & Surveillance",
+      icon: Navigation,
+      title: "Safety & Awareness",
       description:
-        "Advanced surveillance with real-time object tracking and anomaly detection for enhanced security systems.",
+        "Increase situational awareness with real-time hazard detection and environmental alerts for safer operations.",
       applications: [
-        "Perimeter monitoring",
-        "Intrusion detection",
-        "Threat assessment",
+        "Hazard detection",
+        "Alert notifications",
+        "Safety compliance",
       ],
     },
   ];
@@ -100,13 +100,10 @@ const UseCases = () => {
           className="mb-16 text-center"
         >
           <h2 className="font-bebas mb-6 text-5xl tracking-wide text-(--text) md:text-7xl">
-            USE{" "}
-            <span className="bg-linear-to-r from-(--accent) to-purple-600 bg-clip-text text-transparent">
-              CASES
-            </span>
+            USE <span className="text-(--accent)">CASES</span>
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-(--text-muted)">
-            Discover how OAK 4 D transforms robotics and automation across
+            Discover how Spectre transforms spatial computing across
             industries
           </p>
         </motion.div>

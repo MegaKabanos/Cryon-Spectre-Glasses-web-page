@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, Search, Store } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoWhite from "../assets/logo-white.svg";
+import logoWhite from "../assets/logo.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +57,6 @@ const Header = () => {
 
   const navItems = [
     { label: "Products", hasDropdown: true },
-    { label: "Start with OAK", hasDropdown: false },
     { label: "Our Technology", hasDropdown: true },
     { label: "Industry Solutions", hasDropdown: true },
     { label: "Developers", hasDropdown: true },
@@ -66,8 +65,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed inset-x-0 top-5 z-50 mx-auto w-[92%] max-w-400 rounded-[3rem] bg-black/70 shadow-2xl backdrop-blur-xl transition-all duration-300 md:w-[85%] lg:w-[95%]">
-      <nav className="flex w-full items-center justify-between px-6 py-4">
+    <header className="fixed inset-x-0 top-2 z-50 mx-auto w-[92%] max-w-400 rounded-[3rem] bg-(--bg)/60 shadow-2xl backdrop-blur-xl transition-all duration-300 md:w-[85%] lg:w-[95%]">
+      <nav className="flex w-full items-center justify-between px-6 py-2 sm:py-4">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -142,7 +141,7 @@ const Header = () => {
             {isSearchActive ? <X size={24} /> : <Search size={24} />}
           </motion.button>
 
-          <button className="font-montserrat flex items-center gap-2 rounded-full bg-(--accent) px-5 py-2 text-sm font-bold text-(--text) transition-colors hover:bg-(--w-bg-light) hover:text-black">
+          <button className="font-montserrat flex items-center gap-2 rounded-full bg-(--accent) px-5 py-2 text-sm font-bold text-(--text) transition-colors hover:bg-(--text) hover:text-black">
             <Store size={14} /> Store
           </button>
         </div>
@@ -219,7 +218,7 @@ const Header = () => {
                 <input
                   type="text"
                   placeholder="Search"
-                  className="font-montserrat w-full rounded-xl border border-(--w-border) bg-(--bg) px-4 py-2 text-sm text-(--w-text) placeholder-white/40 transition-all duration-200 focus:border-white/50 focus:outline-none"
+                  className="font-montserrat w-full rounded-xl border border-(--border) bg-(--bg) px-4 py-2 text-sm text-(--text) placeholder-white/40 transition-all duration-200 focus:border-white/50 focus:outline-none"
                 />
               </div>
             </div>

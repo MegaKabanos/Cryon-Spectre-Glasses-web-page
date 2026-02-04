@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import oakD5 from "../assets/OAK_D_5.webp";
-import heroSmBg from "../assets/hero-sm.png";
-import heroLuxBg from "../assets/hero-lux.png";
+import heroLuxBg from "../assets/glassesf.png";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,70 +14,48 @@ const Hero = () => {
   }, []);
 
   return (
-    <section
-      className="justify-top relative flex h-screen w-full flex-col items-center overflow-hidden bg-(--bg-dark) bg-cover pt-20 sm:min-h-250 md:pt-30"
-      style={{
-        backgroundImage: `url(${isMobile ? heroSmBg : heroLuxBg})`,
-      }}
-    >
-      {/* Heading and Image */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
+    <section className="flex flex-col items-center bg-gradient-to-tl from-[#D2D6D9] to-[#25465D] pt-10">
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        className="max-w-9xl relative z-10 mt-8 px-4 text-center"
+        transition={{ duration: 1.2, delay: 0.7 }}
+        className="font-bebas mt-10 sm:mt-19 text-6xl font-bold tracking-wide text-(--text) md:text-9xl"
       >
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="font-bebas mb-14 text-6xl font-bold tracking-wide text-(--text) md:text-9xl"
-        >
-          <span className="bg-linear-to-t from-white to-gray-400 bg-clip-text text-transparent">
-            OAK 4 D
-          </span>
-        </motion.h1>
+        <span className="bg-linear-to-t from-white to-gray-400 bg-clip-text text-transparent uppercase">
+          cryon spectre
+        </span>
+      </motion.h1>
 
-        {/* Image */}
-        <div className="relative z-10 flex w-full max-w-6xl items-center justify-center px-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-            className="max-w-3xl"
-          >
-            <div className="mb-9 flex h-40 w-50 items-center justify-center overflow-visible rounded-3xl border border-gray-800 bg-gray-950 shadow-[inset_0_0_5px_1px_hsl(256_81%_53%/.2)] sm:h-80 sm:w-155">
-              <img
-                src={oakD5}
-                alt="OAK 4 D"
-                className="min-w-80 scale-110 sm:min-w-200"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </motion.div>
+      <div className="flex h-auto w-full flex-col items-center justify-between overflow-hidden bg-contain bg-bottom bg-no-repeat">
+        <img
+          src={heroLuxBg}
+          alt="hero-img"
+          className="h-auto w-full max-w-[90%]"
+        />
+      </div>
+
       {/* Bottom Text and Button */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.9 }}
-        className="max-w-9xl mt-8 flex w-screen flex-col items-center justify-center gap-3 text-center sm:mt-15 sm:flex-row sm:gap-20"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 1.2 }}
+        className="flex items-center justify-center border border-(--border)/20 bg-white/10 w-full backdrop-blur-2xl mb-16 shadow-[0_0_50px_1px_rgba(0,0,0,0.3)]"
       >
-        <p className="font-inter max-w-m mb-6 text-2xl font-bold tracking-tight text-(--text) sm:mb-auto md:max-w-3xl lg:text-[2.35rem]">
-          Spatial perception <br className="lg:hidden" /> is no longer a
-          bottleneck - <br />
-          <span className="text-(--accent)">it's your greatest advantage</span>
-        </p>
-
-        {/* Buy Now Button */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="font-inter group flex min-w-50 items-center justify-center gap-2 rounded-full bg-(--accent) px-8 py-4 text-lg font-semibold text-white shadow-(--accent)/30 shadow-lg transition-opacity duration-200 hover:opacity-90"
-        >
-          Buy Now
-          <ChevronRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
-        </motion.button>
+        <div className="flex w-screen max-w-6xl flex-col items-center justify-between py-5 gap-3 sm:px-7 sm:py-9 text-center sm:flex-row sm:gap-20">
+          <p className="font-montserrat bg-linear-to-t from-white to-gray-300 bg-clip-text text-sm font-semibold tracking-tighter text-transparent uppercase drop-shadow-2xl sm:mb-auto sm:text-4xl md:max-w-5xl">
+            experience the future of smart eyewear
+          </p>
+          {/* Buy Now Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="font-inter group flex min-w-40 cursor-pointer items-center justify-center gap-2 rounded-full bg-(--accent) py-2 text-sm font-semibold text-white shadow-(--accent)/30 shadow-lg transition-opacity duration-200 hover:opacity-90 sm:px-8 sm:py-4 sm:text-lg"
+          >
+            Pre-Order
+            <ChevronRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
+          </motion.button>
+        </div>
       </motion.div>
     </section>
   );
