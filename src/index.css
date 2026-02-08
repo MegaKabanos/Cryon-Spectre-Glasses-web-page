@@ -6,23 +6,27 @@
   --main-font: "Bebas Neue", sans-serif;
   --sub-font: "Montserrat", sans-serif;
 
-  --accent: hsl(207, 100%, 41%);
-  --bg-dark: hsl(0, 0%, 0%);
-  --bg: hsl(0, 0%, 5%);
-  --bg-light: hsl(0, 0%, 10%);
-  --text: hsl(0, 0%, 95%);
-  --text-muted: hsl(0, 0%, 70%);
+  --bg-dark: hsl(220, 40%, 5%);
+  --bg: hsl(222, 35%, 10%);
+  --bg-light: hsl(222, 30%, 15%);
   
-  --border: hsl(0, 0%, 15%);
-  --highlight: hsl(0, 0%, 60%);
+  --text: hsl(210, 40%, 98%);
+  --text-muted: hsl(215, 20%, 65%);
+  
+  --accent: hsl(190, 100%, 35%);
+  --accent-shadow: hsl(190, 100%, 10%);
+  
+  --highlight: hsl(190, 100%, 70%);  
+  --border: hsl(220, 25%, 20%);
 
-  --w-bg-dark: hsl(0, 0%, 85%);
-  --w-bg: hsl(0, 0%, 90%);
-  --w-bg-light: hsl(0, 0%, 100%);
-  --w-text: hsl(0, 0%, 5%);
-  --w-text-muted: hsl(0, 0%, 20%);
-  --w-border: hsl(0, 0%, 30%);
-  --w-highlight: hsl(0, 0%, 100%);
+  --w-bg: hsl(210, 20%, 90%);         
+  --w-bg-dark: hsl(210, 35%, 30%);         
+  --w-bg-light: hsl(210, 20%, 100%);         
+  --w-text: hsl(220, 35%, 15%);       
+  --w-text-muted: hsl(220, 15%, 90%); 
+  
+  --w-border: hsl(220, 35%, 25%);     
+  --w-accent: hsl(200, 90%, 40%);     
 }
 
 .font-bebas {
@@ -40,12 +44,7 @@ html {
   margin: 0;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
-body {
-  margin: 0;
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text);
+  
 }

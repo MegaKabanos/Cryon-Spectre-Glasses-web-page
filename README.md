@@ -1,48 +1,52 @@
-# OAK 4 D Product Landing Page
+# Cryon Spectre - Smart Eyewear Landing Page
 
-A modern, responsive product landing page for the OAK 4 D robotic vision camera. Features interactive components, detailed technical specifications, and smooth animations to showcase the product's capabilities and use cases.
+A product landing page for **Cryon Spectre**—next-generation smart eyewear. This project demonstrates a premium, responsive design with advanced animations and glassmorphism effects.
 
-## Technologies
+- **React 18** - Component-based UI
+- **TypeScript** - Type safety and developer experience
+- **Vite** - Lightning fast dev server and build tool
+- **Tailwind CSS v4** - Utility-first styling with custom configuration
+- **Framer Motion** - Production-ready animation library
+- **Lucide React** - Beautiful, consistent icons
 
-- **React 18+** - UI library
-- **TypeScript** - Type-safe development
-- **Vite** - Fast build tool & dev server
-- **Tailwind CSS** - Utility-first styling
-- **Framer Motion** - Smooth animations
-- **Lucide React** - Icon library
-
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── Header.tsx                 # Navigation & mobile menu
-│   ├── Hero.tsx                   # Hero section
-│   ├── ImageSlider.tsx            # Interactive image carousel
-│   ├── UseCases.tsx               # Use case cards
-│   ├── TechSpecsSheet.tsx         # Detailed specs layout
-│   ├── CallToAction.tsx           # CTA
-│   └── Footer.tsx                 # Footer with links
-│
-├── assets/
-│   ├── logo-white.svg
-│   ├── OAK_D_1.webp
-│   ├── OAK_D_2.webp
-│   ├── OAK_D_3.webp
-│   ├── OAK_D_4.png
-│   ├── OAK_D_5.webp
-│   ├── hero-sm.png                # Mobile background
-│   └── hero-lux.png               # Desktop background
-│
-├── App.tsx
-├── main.tsx
-└── index.css                      # Global styles & variables
-```
-
-## Quick Start
+## 📂 Project Structure
 
 ```bash
-npm install
-npm run dev
-npm run build
+src/
+├── components/
+│   ├── Header.tsx         # Responsive navigation with glass effect
+│   ├── Hero.tsx           # Main landing area with product showcase
+│   ├── ImageSlider.tsx    # Feature highlights carousel
+│   ├── UseCases.tsx       # Grid layout for product applications
+│   ├── TechSpecsSheet.tsx # Detailed technical specifications
+│   ├── CallToAction.tsx   # Final conversion section
+│   └── Footer.tsx         # Site footer
+│
+├── assets/
+│   ├── glassesf.png       # Main product hero image
+│   ├── placeholder.jpg    # Variation assets
+│   └── logo.svg             # Other project assets
+│
+├── index2.css             # Main stylesheet with custom variables
+├── App.tsx                # Main application entry
+└── main.tsx               # Bootstrap configuration
 ```
+
+## ⚡ Quick Start
+
+1.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+2.  **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+3.  **Build for production:**
+    ```bash
+    npm run build
+    ```

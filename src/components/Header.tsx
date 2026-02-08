@@ -7,6 +7,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [isScrolledPastSlider, setIsScrolledPastSlider] = useState(false);
 
   const searchRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -49,6 +50,18 @@ const Header = () => {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Assuming Hero + ImageSlider take up roughly 2 viewport heights.
+      // Adjust this threshold as needed based on actual component heights.
+      const threshold = window.innerHeight * 2;
+      setIsScrolledPastSlider(window.scrollY > threshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = (name: string) => {
     setOpenDropdown(openDropdown === name ? null : name);
@@ -65,8 +78,14 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed inset-x-0 top-2 z-50 mx-auto w-[92%] max-w-400 rounded-[3rem] bg-(--bg)/60 shadow-2xl backdrop-blur-xl transition-all duration-300 md:w-[85%] lg:w-[95%]">
-      <nav className="flex w-full items-center justify-between px-6 py-2 sm:py-4">
+    <header className="fixed inset-x-0 top-2 z-50 mx-auto w-[92%] max-w-400 rounded-[3rem] transition-all duration-300 md:w-[85%] lg:w-[95%]">
+      <nav
+        className={`flex w-full rounded-[3rem] ${isOpen ? "border-none" : "border-(--border)"}  backdrop-blur-xl items-center justify-between px-6 py-2 sm:py-4 transition-all duration-500 border ${
+          isScrolledPastSlider
+            ? "bg-white/10"
+            : `bg-(--bg)/60`
+        }`}
+      >
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0 }}

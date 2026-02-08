@@ -67,8 +67,8 @@ const TechSpecsSheet = () => {
   ];
 
   return (
-    <div className="bg-(--bg-dark) shadow-2xl md:px-5 md:py-10">
-      <section className="relative w-full rounded-2xl bg-(--bg-light) px-4 py-20">
+    <section className="bg-(--bg-dark) shadow-2xl md:px-5 md:py-10">
+      <div className="relative w-full rounded-2xl bg-(--bg) px-4 py-20">
         <div className="mx-auto max-w-7xl">
           {/* Header */}
           <motion.div
@@ -105,7 +105,7 @@ const TechSpecsSheet = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, staggerChildren: 0.1 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 gap-15 rounded-2xl border border-(--border) bg-(--bg)/20 p-8 shadow-2xl sm:p-14 md:grid-cols-2"
+            className="grid grid-cols-1 gap-15 rounded-2xl border border-(--border) bg-(--bg-light) p-8 shadow-2xl sm:p-14 md:grid-cols-2"
           >
             {specifications.map((category, index) => (
               <React.Fragment key={index}>
@@ -116,7 +116,7 @@ const TechSpecsSheet = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="hidden min-h-96 items-center justify-center overflow-hidden rounded-2xl border border-(--border) bg-linear-to-br from-(--bg-light) to-(--bg-light) sm:flex"
+                    className="hidden min-h-96 items-center justify-center overflow-hidden rounded-2xl border border-(--border) bg-(--bg-light) sm:flex"
                   >
                     <img
                       src={imgPlaceholder}
@@ -169,17 +169,17 @@ const TechSpecsSheet = () => {
           <p className="font-semnibold text-4xl text-(--text) sm:mr-12">
             Learn more <br className="sm:hidden" /> about Spectre
           </p>
-          <button className="font-inter text-md z-10 w-70 rounded-full border border-(--bg) bg-(--bg) px-4 py-2 font-medium text-(--text) transition-colors duration-200 hover:border-(--accent) hover:bg-(--bg-light) hover:text-(--accent) lg:px-8 lg:py-4 xl:text-xl">
+          <button className="font-inter text-md z-10 w-70 rounded-full border border-transparent bg-(--bg-light) px-4 py-2 font-medium text-(--text) shadow-[0_3px_30px_-10px_var(--accent-shadow)] transition-colors duration-200 hover:border-(--accent) hover:bg-(--bg-light) hover:text-(--accent) lg:px-8 lg:py-4 xl:text-xl">
             Full documentation{" "}
             <ChevronRight className="inline-block h-auto w-5" />
           </button>
-          <button className="font-inter text-md z-10 w-70 rounded-full border border-(--bg) bg-(--bg) px-4 py-2 font-medium text-(--text) transition-colors duration-200 hover:border-(--accent) hover:bg-(--bg-light) hover:text-(--accent) lg:px-8 lg:py-4 xl:text-xl">
+          <button className="font-inter text-md z-10 w-70 rounded-full border border-transparent bg-(--bg-light) px-4 py-2 font-medium text-(--text) shadow-[0_3px_30px_-10px_var(--accent-shadow)] transition-colors duration-200 hover:border-(--accent) hover:bg-(--bg-light) hover:text-(--accent) lg:px-8 lg:py-4 xl:text-xl">
             Get Started guide{" "}
             <ChevronRight className="inline-block h-auto w-5" />
           </button>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
