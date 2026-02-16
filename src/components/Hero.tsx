@@ -28,7 +28,7 @@ const Hero = () => {
           <img
             src={heroLuxBg}
             alt="hero-img"
-            className="h-auto w-full max-w-[90%]"
+            className="h-auto w-full max-w-[90%] md:max-w-[60%]"
           />
         </div>
 

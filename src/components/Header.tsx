@@ -80,7 +80,7 @@ const Header = () => {
   return (
     <header className="fixed inset-x-0 top-2 z-50 mx-auto w-[92%] max-w-400 rounded-[3rem] transition-all duration-300 md:w-[85%] lg:w-[95%]">
       <nav
-        className={`flex w-full rounded-[3rem] ${isOpen ? "border-none" : "border-(--border)"}  backdrop-blur-xl items-center justify-between px-6 py-2 sm:py-4 transition-all duration-500 border ${
+        className={`flex w-full ${isOpen ? "rounded-t-[3rem] border-b-0" : "rounded-[3rem]"} border-(--border) backdrop-blur-xl items-center justify-between px-6 py-2 sm:py-4 transition-all duration-500 border ${
           isScrolledPastSlider
             ? "bg-white/10"
             : `bg-(--bg)/60`
@@ -180,7 +180,9 @@ const Header = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="rounded-b-[3rem] border-t border-white/5 bg-white/5"
+            className={`rounded-b-[3rem] border-x border-b border-t-0 border-(--border) backdrop-blur-xl ${
+              isScrolledPastSlider ? "bg-white/10" : "bg-(--bg)/60"
+            }`}
           >
             <div className="space-y-1 px-6 py-6">
               {navItems.map((item) => (
